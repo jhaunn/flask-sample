@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask Sample</title>
+        <style>
+      body {
+          font-family: 'Comic Sans MS', cursive, sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #f9f9f9;
+      }
+  
+      header {
+          width: 100%;
+          background-color: #fff;
+          padding: 20px 0;
+          text-align: center;
+          border-bottom: 1px solid #ccc;
+      }
+  
+      .positions {
+          width: 80%;
+          max-width: 800px;
+          text-align: center;
+      }
+  
+      .positions h2 {
+          margin-bottom: 20px;
+      }
+  
+      .position {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 10px 0;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: #fff;
+      }
+  
+      .position h3 {
+          margin: 0;          
+          text-align: start;
+      }
+  
+      .position p {
+          margin: 5px 0 0 0;
+          text-align: start;
+      }
+  
+      button {
+          padding: 10px 20px;
+          background-color: #007BFF;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+  
+      button:hover {
+          background-color: #0056b3;
+      }
+  
+      footer {
+          margin: 20px 0;
+      }
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>{{webpage_name}}</h1>
+        </header>
+        <section class="positions">
+            <h2>Open Positions</h2>
+            {% for job in jobs %}
+                {% include 'jobitem.html' %}
+            {% endfor %}
+        </section>
+        <footer>
+            <button>Contact Us</button>
+        </footer>
+    </body>
+</html>
