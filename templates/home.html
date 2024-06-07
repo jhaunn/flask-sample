@@ -3,77 +3,117 @@
     <head>
         <title>Flask Sample</title>
         <style>
-      body {
-          font-family: 'Comic Sans MS', cursive, sans-serif;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          background-color: #f9f9f9;
-      }
-  
-      header {
-          width: 100%;
-          background-color: #fff;
-          padding: 20px 0;
-          text-align: center;
-          border-bottom: 1px solid #ccc;
-      }
-  
-      .positions {
-          width: 80%;
-          max-width: 800px;
-          text-align: center;
-      }
-  
-      .positions h2 {
-          margin-bottom: 20px;
-      }
-  
-      .position {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin: 10px 0;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          background-color: #fff;
-      }
-  
-      .position h3 {
-          margin: 0;          
-          text-align: start;
-      }
-  
-      .position p {
-          margin: 5px 0 0 0;
-          text-align: start;
-      }
-  
-      button {
-          padding: 10px 20px;
-          background-color: #007BFF;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-      }
-  
-      button:hover {
-          background-color: #0056b3;
-      }
-  
-      footer {
-          margin: 20px 0;
-      }
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+            
+            body {
+              font-family: "Roboto", sans-serif;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              background-color: #f9f9f9;
+            }
+          
+            header {
+              width: 100%;
+              background-color: #fff;
+              padding: 20px 0;
+              text-align: center;
+              border-bottom: 1px solid #ccc;
+            }
+
+            .hero {
+                width: 100%;
+                height: 200px;
+                background-color: #eaeaea;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .hero img {
+                width: 100%;
+                height: 100%;                
+                object-fit: cover;
+            }
+
+            .about {
+                width: 80%;
+                max-width: 800px;
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .about h2 {
+                margin-bottom: 10px;
+            }
+            
+            .about p {
+                margin: 10px 0;
+            }
+            
+            .positions {
+                width: 80%;
+                max-width: 800px;
+                text-align: center;
+            }
+            
+            .positions h2 {
+                margin-bottom: 20px;
+            }
+            
+            .position {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 0;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #fff;
+            }
+            
+            .position h3 {
+                margin: 0;          
+                text-align: start;
+            }
+            
+            .position p {
+                margin: 5px 0 0 0;
+                text-align: start;
+            }
+            
+            button {
+                padding: 10px 20px;
+                background-color: #007BFF;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            
+            button:hover {
+                background-color: #0056b3;
+            }
+            
+            footer {
+                margin: 20px 0;
+            }
     </style>
     </head>
     <body>
         <header>
             <h1>{{webpage_name}}</h1>
         </header>
+        <section class="hero">
+            <img src="https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hero Image">
+        </section>
+        <section class="about">
+            <h2>About InnoWave Solutions</h2>
+            <p>At InnoWave Solutions, we believe that our people are our greatest asset. Our mission is to foster a collaborative, inclusive, and innovative work environment where every team member can thrive. We are committed to creating a culture that values diversity, encourages professional growth, and recognizes the unique contributions of each individual.</p>
+        </section>
         <section class="positions">
             <h2>Open Positions</h2>
             {% for job in jobs %}

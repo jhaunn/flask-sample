@@ -33,7 +33,7 @@ JOBS = [
 def hello_world():
     return render_template('home.html',
                           jobs = JOBS,
-                          webpage_name = 'Flask Webpage')
+                          webpage_name = 'InnoWave Solutions')
 
 @app.route("/api/jobs")
 def list_jobs():
